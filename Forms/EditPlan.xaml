@@ -1,0 +1,51 @@
+﻿<Window x:Class="Farm.Forms.EditPlan"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Farm.Forms"
+        mc:Ignorable="d"
+        Title="Редактирование плана посева" Height="600" Width="330">
+    <Grid>
+        <StackPanel Background="#A0A0A0">
+            <StackPanel Height="50">
+                <Grid VerticalAlignment="Bottom" Height="50" Background="LightGray">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="auto" />
+
+                    </Grid.ColumnDefinitions>
+                    <Button Content="Назад" Width="80" Height="35" FontSize="16" Margin="5 0 0 0" Grid.Column="0" Click="Button_Click"/>
+                    <StackPanel Margin="0 0 50 0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+                        <TextBlock Text="Изменить план" FontSize="20" FontWeight="Bold"></TextBlock>
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+            <StackPanel Margin="0 20 0 0" Background="LightGray" Height="500" Width="300">
+                <StackPanel Margin="0 10 0 0">
+                    <TextBlock Text="Поле" FontSize="18" FontStyle="Italic" HorizontalAlignment="Center"></TextBlock>
+                    <ComboBox x:Name="fieldBox" Height="36" FontSize="18" Margin="15 5 15 0"></ComboBox>
+                </StackPanel>
+                <StackPanel Margin="0 15 0 0">
+                    <TextBlock Text="Семена" FontSize="18" FontStyle="Italic" HorizontalAlignment="Center"></TextBlock>
+                    <ComboBox x:Name="seedsBox" Height="36" FontSize="18" Margin="15 5 15 0"></ComboBox>
+                </StackPanel>
+                <StackPanel Margin="0 10 0 0">
+                    <TextBlock Text="Вес (кг)" FontSize="18" FontStyle="Italic" HorizontalAlignment="Center"></TextBlock>
+                    <TextBox x:Name="weightBox" VerticalContentAlignment="Center" Height="36" FontSize="18" Margin="15 5 15 0"></TextBox>
+                </StackPanel>
+                <StackPanel Margin="0 10 0 0">
+                    <TextBlock Text="Вес (кг)" FontSize="18" FontStyle="Italic" HorizontalAlignment="Center"></TextBlock>
+                    <DatePicker x:Name="dateBox" Height="36" FontSize="18" Margin="15 5 15 0" SelectedDateChanged="dateBox_SelectedDateChanged" ></DatePicker>
+                </StackPanel>
+                <StackPanel Margin="0 10 0 0">
+                    <TextBlock Text="Прогноз погоды" FontSize="18" FontStyle="Italic" HorizontalAlignment="Center"></TextBlock>
+                    <TextBox x:Name="forecastBox" IsReadOnly="True" Height="100" FontSize="18" Margin="15 5 15 0"  AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"></TextBox>
+                </StackPanel>
+                <Button Content="Обновить" Width="100" Height="36" FontSize="16" Background="#007bff" Foreground="White" Margin="0 10 0 0" Cursor="Hand" Click="Button_Click_1"></Button>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Window>
